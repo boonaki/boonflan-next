@@ -1,28 +1,22 @@
-import { useState } from "react";
-
 interface Bag{
    "slice": number,
    "mini": number,
    "whole": number
 }
 
-const ItemSelectionMenu = (props: {type: string, isIncrementedByParam: boolean, handleCount: (isDown: boolean, type: string) => void, selectedItems: Bag }) => {
-   const [cartCount, setCartCount] = useState(0);
+const ItemSelectionMenu = (props: {type: string, isIncrementedByParam: boolean, handleCount: (isDown: boolean, type: string) => void, selectedItems: Bag, count: number }) => {
 
    const handleIncrement = () => {
-      if (cartCount < 99) {
+      if (props.count < 99) {
          props.handleCount(false, props.type);
-         setCartCount(cartCount + 1);
       }
    }
 
    const handleDecrement = () => {
-      if (cartCount > 0) {
+      if (props.count > 0) {
          props.handleCount(true, props.type);
-         setCartCount(cartCount - 1);
       }
    }
-
 
    return (
       <div className="mt-1 flex justify-between items-center">
@@ -41,7 +35,7 @@ const ItemSelectionMenu = (props: {type: string, isIncrementedByParam: boolean, 
                </svg>
             </button>
          </div>
-         <span className="px-2 font-semibold flex items-center">{cartCount}</span>
+         <span className="px-2 font-semibold flex items-center">{props.count}</span>
       </div>
    )
 }

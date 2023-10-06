@@ -20,7 +20,8 @@ const config: Config = {
          },
          animation: {
             slideIn: "slideIn 0.3s ease-in-out",
-            slideOut: "slideOut 0.3s ease-in-out"
+            slideOut: "slideOut 0.3s ease-in-out",
+            pingNoRepeat: "ping 1s linear"
          },
          fontFamily: {
             'mansalva': ["Mansalva", "cursive"]

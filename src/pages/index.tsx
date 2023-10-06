@@ -16,7 +16,7 @@ export default function Home() {
             <section className="flex flex-col items-center">
                <img></img>
                <LogoCard />
-               <p id="menu" className="mt-4 mb-8 italic text-lg px-8 text-center font-serif">Have a taste of some of the best flan in the Triangle area.</p>
+               <p id="menu" className="mt-4 mb-8 italic text-lg px-8 pt-4 text-center font-serif">Have a taste of some of the best flan in the Triangle area.</p>
             </section>
             <section className="flex justify-center">
                <div className="sm:grid sm:grid-cols-2 sm:gap-4 xl:grid-cols-3 xl:gap-8">
