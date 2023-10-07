@@ -1,5 +1,5 @@
 
-const CartItem = (props: { title: string, total: number, url: string, totalSlices: number, totalMinis: number, totalWhole: number, isEditing: boolean, handleRemoveItem: (id: string) => void, id: string }) => {
+const CartItem = (props: { title: string, total: number, url: string, totalSlices: number, totalMinis: number, totalWhole: number, isEditing: boolean, handleRemoveItem: (id: string) => void, id: string, slicePrice: number, miniPrice: number, wholePrice: number }) => {
    return (
       <div className="flex my-3">
          {props.isEditing &&
@@ -20,10 +20,10 @@ const CartItem = (props: { title: string, total: number, url: string, totalSlice
                <div className="grow h-full border-b-2 border-[#acacac] relative top-[-5px] border-dotted border-black"></div>
                <span className="ml-1">${props.total}</span>
             </div>
-            <div className="gap-1 grid grid-cols-3 w-fit mt-1">
-               <span className="text-sm leading-none">{props.totalSlices} slices</span>
-               <span className="text-sm leading-none">{props.totalMinis} mini</span>
-               <span className="text-sm leading-none">{props.totalWhole} whole</span>
+            <div className="gap-1 grid grid-cols-3 w-fit">
+               <span className="text-sm leading-none flex flex-col sm:block">{props.totalSlices} slices <span>(${props.totalSlices * props.slicePrice})</span></span>
+               <span className="text-sm leading-none flex flex-col sm:block">{props.totalMinis} mini <span>(${props.totalMinis * props.miniPrice})</span></span>
+               <span className="text-sm leading-none flex flex-col sm:block">{props.totalWhole} whole <span>(${props.totalWhole * props.wholePrice})</span></span>
             </div>
          </div>
       </div>

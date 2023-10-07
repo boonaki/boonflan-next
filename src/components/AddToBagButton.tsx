@@ -9,7 +9,7 @@ const AddToBagButton = (props: { id: string, handleAddToBag: () => void }) => {
       setIsAdded(true);
       setTimeout(() => {
          setIsAdded(false)
-      }, 5000)
+      }, 3000)
    }
 
    return (

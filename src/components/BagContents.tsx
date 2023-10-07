@@ -27,7 +27,7 @@ const BagContents = (props: {items: BagItem[], isEditing: boolean, handleRemoveI
    return (
       <div className="bg-white flex-col justify-between flex p-2 rounded-lg min-h-[225px]">
          {props.items.map((e,i) => 
-            <CartItem title={e.title} handleRemoveItem={props.handleRemoveItem} url={e.url} totalMinis={e.mini} total={(e.slicePrice * e.slice) + (e.miniPrice * e.mini) + (e.wholePrice * e.whole)} totalSlices={e.slice} totalWhole={e.whole} isEditing={props.isEditing} id={e.id} key={i} />
+            <CartItem title={e.title} handleRemoveItem={props.handleRemoveItem} url={e.url} totalMinis={e.mini} total={(e.slicePrice * e.slice) + (e.miniPrice * e.mini) + (e.wholePrice * e.whole)} totalSlices={e.slice} totalWhole={e.whole} isEditing={props.isEditing} id={e.id} slicePrice={e.slicePrice} miniPrice={e.miniPrice} wholePrice={e.wholePrice} key={i} />
          )}
          <div className="">
             <div className="w-full h-[2px] rounded-lg bg-[#acacac] mt-4 mb-2"></div>
