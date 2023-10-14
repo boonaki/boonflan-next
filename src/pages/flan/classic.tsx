@@ -11,7 +11,6 @@ const classic = () => {
                <div className="pr-2 sm:w-[500px] md:ml-4 lg:ml-0">
                   <div className="flex">
                      <h3 className="title-span leading-none font-bold text-2xl font-mansalva">Classic Flan</h3>
-                     <span className="font-bold text-sm p-1 rounded-lg bg-[#5555551c] text-[#a48a69] ml-1">Most Popular</span>
                   </div>
                   <p className="leading-none my-2 font-serif italic">Soft, creamy flan covered in a caramel glaze.</p>
                </div>

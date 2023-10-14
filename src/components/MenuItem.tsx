@@ -6,7 +6,7 @@ const MenuItem = (props: {url: string, altTitle: string | null, title: string, s
          <div className="flex flex-col">
             <div className="pr-2">
                <div className="flex">
-                  <Link href={`/flan/${props.url}`}><h3 className="title-span leading-none font-bold text-2xl">{props.title}</h3></Link>
+                  <Link href={`/flan/${props.url}`}><h3 className="title-span leading-none font-bold text-2xl font-mansalva">{props.title}</h3></Link>
                   {props.altTitle && <span className="font-bold text-sm p-1 rounded-lg bg-[#5555551c] text-[#a48a69] ml-1">{props.altTitle}</span>}
                </div>
                <p className="leading-none mt-2 font-serif italic">{props.description}</p>
